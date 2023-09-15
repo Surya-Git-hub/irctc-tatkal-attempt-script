@@ -19,11 +19,11 @@ import puppeteer from 'puppeteer';
     await toStation.type('DEHRADUN - DDN ');
     const journeydate = await page.waitForSelector('#jDate > span > input');
     await journeydate.click()
-    // await journeydate.type('14/09/2023');
-    const jdate = await page.waitForSelector('#jDate > span > div > div > div.ui-datepicker-calendar-container.ng-tns-c58-10.ng-star-inserted > table > tbody > tr:nth-child(3) > td.ng-tns-c58-10.ui-datepicker-current-day.ui-datepicker-today.ng-star-inserted > a');
-    await jdate.click();
-    const jClass = await page.waitForSelector('#journeyClass > div');
-    await jClass.click();
+    await journeydate.type('16/09/2023');
+    // const jdate = await page.waitForSelector('#jDate > span > div > div > div.ui-datepicker-calendar-container.ng-tns-c58-10.ng-star-inserted > table > tbody > tr:nth-child(3) > td.ng-tns-c58-10.ui-datepicker-current-day.ui-datepicker-today.ng-star-inserted > a');
+    // await jdate.click();
+    // const jClass = await page.waitForSelector('#journeyClass > div');
+    // await jClass.click();
     const AC3Class = await page.waitForSelector('#journeyClass > div > div.ng-trigger.ng-trigger-overlayAnimation.ng-tns-c65-11.ui-dropdown-panel.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ng-star-inserted > div > ul > p-dropdownitem:nth-child(8) > li');
     await AC3Class.click();
     const ticketType = await page.waitForSelector('#journeyQuota > div');
